@@ -4,24 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#101418" />
-  <meta name="description" content="Luke Haddad — computer science student interested in software engineering, systems, and cybersecurity. Portfolio in progress." />
+  <meta name="description" content="Luke Haddad — computer science student interested in testing solutions, software engineering, systems, and cybersecurity. Portfolio in progress." />
   <link rel="stylesheet" href="style.css">
   <title>Luke Haddad | Portfolio</title>
 </head>
 <body>
   <header class="container">
     <a class="brand" href="/" aria-label="Luke Haddad home">lukohad<span style="color: var(--accent)">.</span></a>
-    <span class="domain">lukohad.dev</span>
+    
+    
+    <nav class="navflex" aria-label="Main navigation">
+        <a class="navigation" href="#about">About</a>
+        <a class="navigation" href="#projects">Projects</a>
+        <a class="navigation" href="#fun">For Fun</a>
+
+        <span class="nav-indicator" aria-hidden="true"></span>
+    </nav>
+
   </header>
 
   <main class="container">
     <section class="content" aria-labelledby="hero-title">
 
-      <h1 id="hero-title">Hi, I'm Luke<span>.</span></h1>
+      <h1 id="hero-title">lukohad<span>.</span></h1>
 
       <p class="intro">
         I'm <strong>Luke Haddad</strong>, a computer science student at
-        <strong>Northern Arizona University</strong> interested in software engineering,
+        <strong>Northern Arizona University</strong> interested in testing solutions, software engineering,
         systems, and cybersecurity.
       </p>
 
@@ -42,7 +51,7 @@
 
   <footer class="container">
     <span>© <span id="year">2026</span> Luke Haddad</span>
-    <span>Made with HTML &amp; CSS</span>
+    <span>Made with HTML &amp; CSS &amp; Vite &amp; TypeScript</span>
   </footer>
 
   <script type="module" src="/src/main.ts"></script>

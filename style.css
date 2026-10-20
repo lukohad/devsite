@@ -39,6 +39,66 @@ header {
     gap: 16px;
 }
 
+.navflex {
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 8px;
+}
+
+.navigation {
+    padding: 0.5em;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 200ms ease;
+}
+
+.navigation:hover,
+.navigation:focus-visible {
+    color: var(--text);
+}
+
+.nav-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    height: 3px;
+    width: 0;
+
+    background: var(--accent);
+    border-radius: 999px;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition:
+        transform 250ms cubic-bezier(0.2, 0.8, 0.2, 1),
+        width 250ms cubic-bezier(0.2, 0.8, 0.2, 1),
+        opacity 150ms ease;
+}
+
+.nav-indicator.clicked {
+    animation: nav-click 150ms ease;
+}
+
+@keyframes nav-click {
+    40% {
+        height: 3px;
+        box-shadow: 0 0 12px var(--accent);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navigation,
+    .nav-indicator {
+        transition: none;
+        animation: none;
+    }
+}
+
+
 .brand {
     text-decoration: none;
     font-size: 16px;
